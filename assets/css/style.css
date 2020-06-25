@@ -33,28 +33,34 @@ header p {
   font-size: 2rem;
 }
 
-p,
 li {
   font-size: 1.6rem;
 }
 
-form {
+form{
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
 }
 
-form input {
+form input{
   outline: none;
   border: none;
   padding: 12px;
-  width: 100%;
   font-size: 2.2rem;
   border: 2px solid var(--grey);
   border-radius: 12px;
 }
-
-form .form-group {
+form select {
+  outline: none;
+  border: none;
+  padding: 12px;
+  font-size: 2.2rem;
+  border: 2px solid var(--grey);
+  border-radius: 12px;
+}
+.form-group {
+  display:flex;
   margin: 10px 6px 10px 0;
   flex: 1;
 }
@@ -112,14 +118,17 @@ footer {
   margin-bottom: 20px;
 }
 
-.task-name {
-  margin: 0;
+.task-input {
+  margin: 0 5px;
   font-size: 1.8rem;
+  flex: 1;
 }
 
-.task-type {
+.select-dropdown {
   color: var(--secondary);
   font-size: 1.55rem;
+  flex:1;
+  margin: 0 5px;
 }
 .task-actions {
   display: flex;
@@ -137,7 +146,8 @@ footer {
 .btn {
   outline: none;
   border: none;
-  display: inline-block;
+  flex: 1;
+  margin: 0 5px;
   padding: 10px 15px;
   background: var(--primary);
   font-size: 2.2rem;
@@ -217,11 +227,11 @@ footer {
 }
 
 @media screen and (max-width: 980px) {
-  form .form-group {
+  .form-group {
     flex: 1 100%;
   }
 
-  form .form-group button {
+  .form-group button {
     width: 100%;
   }
 
