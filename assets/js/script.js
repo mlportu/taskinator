@@ -175,13 +175,12 @@ var dragTaskHandler = function (event){
     console.log("getId:", getId, typeof getId);
 };
 
-var dropZoneDragHandler = function(event){
+var dropZoneDragHandler = function(event) {
     var taskListEl = event.target.closest(".task-list");
-    taskListEl.setAttribute("style", "background: rgba(68, 233, 255, 0.7); border-style: dashed;");
     if(taskListEl){
         event.preventDefault();
-    }
-    
+        taskListEl.setAttribute("style", "background:rgba(68, 233, 255, 0.7); border-style:dashed;");
+    } 
 };
 
 var dropTaskHandler =function(event){
@@ -190,7 +189,7 @@ var dropTaskHandler =function(event){
     var dropZoneEl = event.target.closest(".task-list");
     var statusType = dropZoneEl.id;
     var statusSelectEl = draggableElement.querySelector("select[name='status-change']");
-    if(statusType === "task-to-do"){
+    if(statusType === "tasks-to-do"){
         statusSelectEl.selectedIndex = 0;
     }
     else if (statusType === "tasks-in-progress"){
